@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+
+	<mat-sidenav #sideNav mode="push">
+		<mat-toolbar color="primary">
+			<h1>Settings</h1>
+			<div style="flex: 1 1 auto;"></div>
+			<button mat-icon-button (click)="sideNav.toggle()">
+                <mat-icon>close</mat-icon>
+            </button>
+		</mat-toolbar>
+		<app-setting></app-setting>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+
+		<mat-toolbar color="primary">
+			<div style="flex: 1 1 auto;"></div>
+			<button mat-icon-button (click)="sideNav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+		</mat-toolbar>
+
+        <router-outlet></router-outlet>
+
+	</mat-sidenav-content>
+
+</mat-sidenav-container>
+  
+

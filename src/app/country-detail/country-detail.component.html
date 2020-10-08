@@ -1,0 +1,25 @@
+<div class="container"
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="32px"
+  fxLayoutGap.xs="0">
+  <div fxFlex="33%">
+    <h1> {{ country?.name }}</h1>
+    <img [src]="country?.flag" alt="Country Flag">
+  </div>
+
+  <div fxFlex="33%">
+    <p class="info"><strong>Capital</strong>: {{country?.capital}}</p>
+    <p><strong>Population</strong>: {{country?.population}}</p>
+    <p><strong>Language</strong>: {{country?.languages[0].name}}</p>
+    <p><strong>Region</strong>: {{ country?.region }}</p>
+  </div>
+
+  <div fxFlex="33%">
+    <p class="info"><strong>Sub Region</strong>: {{ country?.subregion }}</p>
+    <p><strong>Time Zone</strong>: {{country?.timezones}}</p>
+    <p><strong>Calling Code</strong>: {{country?.callingCodes}}</p>
+    <p><strong>Currency</strong>: {{country?.currencies[0].name}}</p>
+  </div>
+</div>
